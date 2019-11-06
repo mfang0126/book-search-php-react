@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import axios from 'axios';
 import { useMergeState } from '../utils/hooks';
 import debounce from '../utils/debounce';
-import { object } from 'prop-types';
+import { Istates } from './types';
 
 const Container = styled.div`
   position: relative;
@@ -45,12 +45,6 @@ const Input = styled.input`
   color: #fff;
 `;
 
-interface Istates {
-  activeSuggestion?: number;
-  filteredSuggestions?: [];
-  showSuggestions?: boolean;
-  userInput?: string;
-}
 const BOOK_SEARCH = 'http://localhost:8000/api/search';
 const fetchFromApi = (query: string, successCb: () => void, failCb: () => void) =>
   axios

@@ -42,7 +42,7 @@ const AppContainer: React.FC = () => (
   <Container>
     <Header>
       <NavBar>
-        {/* <NavItem type="link">Search</NavItem> */}
+        <NavItem type="link">Search</NavItem>
         {/* <NavItem type="link">Login</NavItem> */}
       </NavBar>
     </Header>

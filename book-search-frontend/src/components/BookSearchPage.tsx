@@ -4,6 +4,7 @@ import { useMergeState } from '../utils/hooks';
 import { Typography } from 'antd';
 import AutoComplete from './AutoComplete';
 import SearchResult from './SearchResult';
+import { IBookSearchStates } from './types';
 
 const Container = styled.div`
   margin: auto;
@@ -11,6 +12,7 @@ const Container = styled.div`
   padding: 4rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.55) !important;
 `;
+
 const Title = styled(Typography.Title)`
   font-size: 5rem !important;
   text-align: center;
@@ -18,16 +20,12 @@ const Title = styled(Typography.Title)`
   color: #fff !important;
 `;
 
-interface Istates {
-  selectedBook?: object;
-}
-
 const BookSearchPage: React.FC = () => {
   const [state, updateState] = useMergeState({
     selectedBook: null
   });
 
-  const { selectedBook }: Istates = state;
+  const { selectedBook }: IBookSearchStates = state;
   const getSelectedBook = (selectedBook: {}) => updateState({ selectedBook });
 
   return (

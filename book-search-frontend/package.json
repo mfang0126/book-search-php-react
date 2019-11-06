@@ -20,7 +20,7 @@
     "typescript": "3.6.4"
   },
   "scripts": {
-    "start": "php -S localhost:8000 -t book-search-backend/public && react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
